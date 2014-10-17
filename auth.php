@@ -1,5 +1,6 @@
 <?php
-	define("ONE_YEAR", 3600*24*365);
+	include_once "database.php";
+
 
 	// Set a cookie in client to specify that this client is authenticated
 	function setAuthCookie($username, $password) {
@@ -11,19 +12,19 @@
 
 	// Remove the cookie
 	function removeAuthCookie($username, $password) {
-		setcookie(getToken($username, $password), time()-ONE_YEAR)
-		setcookie($username, time()-ONE_YEAR)
+		setcookie(getToken($username, $password), time()-ONE_YEAR);
+		setcookie($username, time()-ONE_YEAR);
 	}
 
 	// Get the generated token, which will be in the cookie
 	function getToken($username, $password){
-		return $username.':'.md5($username.md5($password))
+		return $username.':'.md5($username.md5($password));
 	}
 
 	// Check if an user is already authenticated in the system
 	function isAuthenticated($token, $username) {
 		$user = getUser($username);
-		return (isset($user) and getToken($username,$user["password"])==$token);
+		return (isset($user) and getToken($username,$user["2"])==$token);
 	}
 
 	// Check if an user exist in the system
@@ -35,5 +36,10 @@
 		}
 
 		return $result;
+	}
+	// Check if the user is authenticated, using the username in the token
+	function tokenIsCorrect($token){
+		$username = explode(':', $token)[0];
+		return isAuthenticated($token, $username);
 	}
 ?>
