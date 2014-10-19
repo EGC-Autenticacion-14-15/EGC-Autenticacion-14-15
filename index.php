@@ -1,5 +1,5 @@
 <?php
 	include_once "auth.php";
 
-	echo getAllUsers();
+	print_r(getAllUsers());
 ?>
