@@ -7,8 +7,10 @@
 		switch ($_GET['method']) {
 			case 'getUsers':
 				getUsers();
+				break;
 			default:
 				badRequest();
+				break;
 		}
 	}
 
