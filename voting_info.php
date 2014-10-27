@@ -12,9 +12,9 @@
 
 	// Mark an user as voted in a specific voting
 	function markAsVoted($user, $voting_id){
-		$votings = $user["votings"]
+		$votings = $user["votings"];
 		if(has_voted($user, $voting_id) && !in_array($voting_id, $votings)){
-			$votings[] = $voting_id
+			$votings[] = $voting_id;
 		}
 	}
 ?>
