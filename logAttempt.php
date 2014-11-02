@@ -35,7 +35,7 @@ try{
 }
 
 function error($name){
-	header('Location: ./?cont=login&error='.$name.'$logout=1');
+	header('Location: ./login.php&error='.$name.'$logout=1');
 	die("Está siendo redirigido...");
 }
 ?>
