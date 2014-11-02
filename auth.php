@@ -27,6 +27,15 @@
 		return (isset($user) and getToken($username,$user["2"])==$token);
 	}
 
+	// Check if an user is already authenticated in the system looking at cookies
+	function isAuthenticated() {
+		if (isset($_COOKIE["user"]) and isset($_COOKIE["token"])) {
+			return isAuthenticated($_COOKIE["token"], $_COOKIE["user"]);
+		} else {
+			return false;
+		}
+	}
+
 	// Check if an user exist in the system
 	function validUser($username, $password){
 		$result = False;
