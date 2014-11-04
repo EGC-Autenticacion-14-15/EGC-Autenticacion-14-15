@@ -5,15 +5,15 @@
 	// Set a cookie in client to specify that this client is authenticated
 	function setAuthCookie($username, $password) {
 		if (validUser($username,$password)) {
-			setcookie(getToken($username, $password), time()+ONE_YEAR);
-			setcookie($username, time()+ONE_YEAR);	
+			setcookie("token",getToken($username, $password), time()+ONE_YEAR);
+			setcookie("user",$username, time()+ONE_YEAR);	
 		}
 	}
 
 	// Remove the cookie
 	function removeAuthCookie($username, $password) {
-		setcookie(getToken($username, $password), time()-ONE_YEAR);
-		setcookie($username, time()-ONE_YEAR);
+		setcookie("token",getToken($username, $password), time()-ONE_YEAR);
+		setcookie("user",$username, time()-ONE_YEAR);
 	}
 
 	// Get the generated token, which will be in the cookie
