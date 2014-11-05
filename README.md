@@ -9,3 +9,4 @@ Repositorio para el proyecto de EGC del grupo Autenticación para el curso 2014-
 * Daniel de los Reyes Leal
 * Juan Carlos Roldán Salvador
 * Alejandro Sánchez Medina
+* Fidel Mazo Delgado
