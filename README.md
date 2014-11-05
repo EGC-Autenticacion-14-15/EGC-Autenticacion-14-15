@@ -8,3 +8,4 @@ Repositorio para el proyecto de EGC del grupo Autenticación para el curso 2014-
 *Daniel Ayala Hernández
 *Daniel de los Reyes Leal
 *Juan Carlos Roldán Salvador
+*Alejandro Sánchez Medina
