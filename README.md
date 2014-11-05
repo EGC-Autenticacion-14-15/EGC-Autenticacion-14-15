@@ -5,3 +5,4 @@ Repositorio para el proyecto de EGC del grupo Autenticación para el curso 2014-
 
 Nombres de los integrantes del grupo:
 *Daniel Ayala Hernández
+*Daniel de los Reyes Leal
