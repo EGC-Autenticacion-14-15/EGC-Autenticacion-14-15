@@ -3,6 +3,8 @@
 
 Repositorio para el proyecto de EGC del grupo Autenticación para el curso 2014-2015 por la ETSII (Universidad de Sevilla).
 
-Nombres de los integrantes del grupo:
+ # Integrantes del grupo:
+ 
 *Daniel Ayala Hernández
 *Daniel de los Reyes Leal
+*Juan Carlos Roldán Salvador
