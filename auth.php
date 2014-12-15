@@ -2,7 +2,6 @@
 	include_once "database.php";
 
 
-	// Set a cookie in client to specify that this client is authenticated
 	function setAuthCookie($username, $password) {
 		if (validUser($username,$password)) {
 			setcookie("token",getToken($username, $password), time()+ONE_YEAR);
